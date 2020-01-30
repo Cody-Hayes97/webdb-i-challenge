@@ -5,6 +5,7 @@ const db = require("../data/dbConfig");
 const router = express.Router();
 
 router.get("/", (req, res) => {
+  console.log(req.query);
   db("accounts")
     .then(acc => {
       res.status(200).json(acc);
